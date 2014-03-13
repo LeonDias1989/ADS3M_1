@@ -14,17 +14,50 @@ public class Testes {
 		Contato f = new Contato("Felizberto Tome da Cunha", "SEM TELEFONE");
 		
 		ListaDuplamenteEncadeada listaTelefonica = new ListaDuplamenteEncadeada();
+		ListaDuplamenteEncadeada listaTelefonica2 = new ListaDuplamenteEncadeada();
 		
-		listaTelefonica.adicionaNoFim(f);
+		
+
 		listaTelefonica.adicionaNoFim(b);
-		listaTelefonica.adicionaNoFim(c);
-		listaTelefonica.adicionaNoFim(a);
-		listaTelefonica.adicionaNoFim(a);
+		listaTelefonica.adicionaNoFim(f);
 		listaTelefonica.adicionaNoFim(d);
+		listaTelefonica.adicionaNoFim(a);
+		listaTelefonica.adicionaNoFim(c);
 		
+//		listaTelefonica.adicionaNoFim("Z");
+//		listaTelefonica.adicionaNoFim("Y");
+//		listaTelefonica.adicionaNoFim("W");
+//		listaTelefonica.adicionaNoFim("X");
+//		listaTelefonica.adicionaNoFim("V");
+//		listaTelefonica.adicionaNoFim("U");
+//		listaTelefonica.adicionaNoFim("T");
+//		listaTelefonica.adicionaNoFim("S");
+//		listaTelefonica.adicionaNoFim("R");
+//		listaTelefonica.adicionaNoFim("Q");
+//		listaTelefonica.adicionaNoFim("P");
+//		listaTelefonica.adicionaNoFim("O");
+//		listaTelefonica.adicionaNoFim("N");
+//		listaTelefonica.adicionaNoFim("M");
+//		listaTelefonica.adicionaNoFim("L");
+//		listaTelefonica.adicionaNoFim("K");
+//		listaTelefonica.adicionaNoFim("J");
+//		listaTelefonica.adicionaNoFim("I");
+//		listaTelefonica.adicionaNoFim("H");
+//		listaTelefonica.adicionaNoFim("G");
+//		listaTelefonica.adicionaNoFim("F");
+//		listaTelefonica.adicionaNoFim("E");
+//		listaTelefonica.adicionaNoFim("D");
+//		listaTelefonica.adicionaNoFim("C");
+//		listaTelefonica.adicionaNoFim("B");
+//		listaTelefonica.adicionaNoFim("A");
 		
+		listaTelefonica2 = listaTelefonica.bubbleSortNewList(); 
 		
+		System.out.println("Exibindo elementos Desordenados: ");
 		System.out.println(listaTelefonica.toString());
+		
+		System.out.println("\nExibindo elementos Ordenados: ");
+		System.out.println(listaTelefonica2.toString());
 		
 		
 		

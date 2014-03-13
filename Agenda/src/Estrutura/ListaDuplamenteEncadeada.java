@@ -1,10 +1,11 @@
 package Estrutura;
+
 public class ListaDuplamenteEncadeada {
 
-	private Nodo começo;
-	private Nodo fim;
+	protected Nodo começo;
+	protected Nodo fim;
 
-	private int totalElementos = 0;
+	protected int totalElementos = 0;
 
 	public ListaDuplamenteEncadeada() {
 		// Default Constructor
@@ -124,7 +125,7 @@ public class ListaDuplamenteEncadeada {
 		return false;
 	}
 
-	private Nodo getElemento(int indice) {
+	protected Nodo getElemento(int indice) {
 
 		Nodo aux = começo;
 
@@ -202,5 +203,40 @@ public class ListaDuplamenteEncadeada {
 		}
 		return novaSublista;
 	}
+	
+	public ListaDuplamenteEncadeada bubbleSortNewList() {
+
+		ListaDuplamenteEncadeada listAux = new ListaDuplamenteEncadeada();
+
+		for (Nodo i = começo; i != fim; i = i.getProximo()) {
+
+			listAux.adicionaNoComeco(i.getDado());
+		}
+		listAux.adicionaNoComeco(fim.getDado());
+
+		for (int i = 0; i < totalElementos; i++) {
+			for (int j = i + 1; j < totalElementos; j++) {
+
+				String a = listAux.getElemento(i).getDado().toString();
+				String b = listAux.getElemento(j).getDado().toString();
+
+				int result = a.compareTo(b);
+
+				if (result > 0) {
+
+					Object aux = listAux.getElemento(i).getDado();
+					listAux.getElemento(i).setDado(
+							listAux.getElemento(j).getDado());
+					listAux.getElemento(j).setDado(aux);
+				}
+
+			}
+
+		}
+		return listAux;
+
+	}
+
+
 
 }

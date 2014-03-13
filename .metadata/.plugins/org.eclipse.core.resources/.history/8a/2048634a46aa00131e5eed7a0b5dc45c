@@ -1,0 +1,49 @@
+package Estrutura;
+
+public class Nodo<T extends Comparable<T>> implements Comparable<T> {
+
+	private Nodo<T> proxima;
+	private Nodo<T> anterior;
+	private T dado;
+
+	public Nodo(T dado) {
+		this.dado = dado;
+	}
+
+	public T getDado() {
+		return dado;
+	}
+
+	public Nodo getAnterior() {
+		return anterior;
+	}
+
+	public void setAnterior(Nodo anterior) {
+		this.anterior = anterior;
+	}
+
+	public void setProximo(Nodo<T> proxima) {
+		this.proxima = proxima;
+	}
+
+	public Nodo<T> getProximo() {
+		return proxima;
+	}
+
+	public void setDado(T dado) {
+		this.dado = dado;
+	}
+
+	@Override
+	public String toString() {
+
+		return "" + dado;
+	}
+
+	@Override
+	public int compareTo(Nodo<T> nodo) {
+
+		return dado.compareTo(nodo.getDado());
+	}
+
+}

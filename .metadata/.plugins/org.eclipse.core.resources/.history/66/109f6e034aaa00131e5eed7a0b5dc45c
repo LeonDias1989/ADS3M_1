@@ -1,0 +1,46 @@
+package Test;
+
+import Contato.*;
+import Estrutura.*;
+
+public class Testes {
+
+	public static void main(String[] args) {
+		
+		Contato a = new Contato("Aurélio", "51 91839297");
+		Contato b = new Contato("Maria Alencar", "51 33935677");
+		Contato c = new Contato("Aaron", "51 82828282");
+		Contato d = new Contato("Dilma da Silva", "51 91171171");
+		Contato f = new Contato("Felizberto Tome da Cunha", "SEM TELEFONE");
+		
+		ListaDuplamenteEncadeada listaTelefonica = new ListaDuplamenteEncadeada();
+		ListaOrdenada listaTelefonica2 = new ListaOrdenada<>();
+		
+		listaTelefonica.adicionaNoFim(f);
+		listaTelefonica.adicionaNoFim(b);
+		listaTelefonica.adicionaNoFim(c);
+		listaTelefonica.adicionaNoFim(a);
+		listaTelefonica.adicionaNoFim(a);
+		listaTelefonica.adicionaNoFim(d);
+		
+		
+//		listaTelefonica.adicionaNoFim("Z");
+//		listaTelefonica.adicionaNoFim("C");
+//		listaTelefonica.adicionaNoFim("A");
+//		listaTelefonica.adicionaNoFim("A");
+//		listaTelefonica.adicionaNoFim("B");
+//		listaTelefonica.adicionaNoFim("D");
+//		listaTelefonica.adicionaNoFim("J");
+		
+		
+		
+		System.out.println(listaTelefonica.toString());
+		System.out.println(listaTelefonica2.toString());
+		
+		
+		
+		
+
+	}
+
+}

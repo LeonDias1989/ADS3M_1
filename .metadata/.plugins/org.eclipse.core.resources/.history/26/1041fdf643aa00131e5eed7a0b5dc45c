@@ -1,0 +1,14 @@
+package Estrutura;
+
+public class ListaOrdenada <T extends Comparable<T>>extends ListaDuplamenteEncadeada{
+	
+	private Nodo encontrarAnterior(Nodo<T> novo){
+		
+		
+		return null;
+	}
+	
+	
+	
+
+}
