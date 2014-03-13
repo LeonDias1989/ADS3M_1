@@ -1,0 +1,8 @@
+package Repositor;
+
+import Contato.*;
+import Estrutura.*;
+
+public class RepositorioContato {
+
+}

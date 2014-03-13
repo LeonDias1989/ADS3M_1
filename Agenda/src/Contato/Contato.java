@@ -1,6 +1,9 @@
 package Contato;
 
-public class Contato implements Comparable<Contato> {
+import java.io.Serializable;
+
+@SuppressWarnings("serial")
+public class Contato implements Comparable<Contato>, Serializable {
 
 	private String nome;
 	private String telefone;

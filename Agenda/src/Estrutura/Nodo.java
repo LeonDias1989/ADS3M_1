@@ -1,6 +1,11 @@
 package Estrutura;
-public class Nodo {
 
+import java.io.Serializable;
+
+@SuppressWarnings("serial")
+public class Nodo implements Serializable {
+
+	
 	private Nodo proxima;
 	private Nodo anterior;
 	private Object dado;

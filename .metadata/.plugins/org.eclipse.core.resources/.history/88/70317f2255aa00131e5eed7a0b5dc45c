@@ -1,0 +1,30 @@
+package Repositor;
+
+import java.io.IOException;
+
+import Utilitarios.*;
+import Contato.Contato;
+import Estrutura.ListaDuplamenteEncadeada;
+
+
+public class RepositorioContato {
+
+	private ListaDuplamenteEncadeada listaTel;
+	private Arquivo file;
+
+	public RepositorioContato() {
+		listaTel = new ListaDuplamenteEncadeada();
+		file = new Arquivo();
+	}
+
+	public void addContato(Contato pessoa) throws IOException {
+
+		listaTel.adicionaNoFim(pessoa);
+		file.salvar(pessoa);
+	}
+	
+	
+	
+	
+
+}

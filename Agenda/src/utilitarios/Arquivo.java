@@ -1,4 +1,4 @@
-package utilitarios;
+package Utilitarios;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -13,7 +13,7 @@ import java.nio.file.Paths;
 
 public class Arquivo {
 
-	String url = "PastaArquivo\\Arquivo.bin";
+	String url = "PastaArquivo\\Arquivo.txt";
 	Path path = Paths.get(url);
 
 	public Object salvar(Object obj) throws IOException {

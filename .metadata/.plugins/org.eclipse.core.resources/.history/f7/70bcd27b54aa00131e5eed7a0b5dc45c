@@ -1,0 +1,21 @@
+package Repositor;
+
+import Contato.*;
+import Estrutura.*;
+import Utilitarios.*;
+public class RepositorioContato {
+
+	private ListaDuplamenteEncadeada listaTel;
+
+	public RepositorioContato() {
+		listaTel = new ListaDuplamenteEncadeada();
+	}
+
+	public void addContato(Contato pessoa) {
+
+		listaTel.adicionaNoFim(pessoa);
+	}
+	
+	
+
+}
