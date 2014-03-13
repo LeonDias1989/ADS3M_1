@@ -40,7 +40,7 @@ public class Contato {
 
 	@Override
 	public String toString() {
-		return nome + " Telefone: " + telefone;
+		return "Contato [nome=" + nome + ", telefone=" + telefone + "]";
 	}
 	
 	
