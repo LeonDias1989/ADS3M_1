@@ -18,11 +18,11 @@ public class Testes {
 		
 		
 
-//		listaTelefonica.adicionaNoFim(b);
-//		listaTelefonica.adicionaNoFim(f);
-//		listaTelefonica.adicionaNoFim(d);
-//		listaTelefonica.adicionaNoFim(a);
-//		listaTelefonica.adicionaNoFim(c);
+		listaTelefonica.adicionaNoFim(b);
+		listaTelefonica.adicionaNoFim(f);
+		listaTelefonica.adicionaNoFim(d);
+		listaTelefonica.adicionaNoFim(a);
+		listaTelefonica.adicionaNoFim(c);
 		
 		listaTelefonica.adicionaNoFim("Z");
 		listaTelefonica.adicionaNoFim("Y");
