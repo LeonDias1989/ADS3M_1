@@ -2,7 +2,7 @@ package Estrutura;
 
 public class ListaDuplamenteEncadeada {
 
-	protected Nodo comeco;
+	protected Nodo começo;
 	protected Nodo fim;
 
 	protected int totalElementos = 0;
@@ -17,12 +17,12 @@ public class ListaDuplamenteEncadeada {
 
 		if (totalElementos == 0) {
 
-			comeco = fim = novo;
+			começo = fim = novo;
 		}
 
-		novo.setProximo(comeco);
-		comeco.setAnterior(novo);
-		comeco = novo;
+		novo.setProximo(começo);
+		começo.setAnterior(novo);
+		começo = novo;
 
 		totalElementos++;
 	}
@@ -32,7 +32,7 @@ public class ListaDuplamenteEncadeada {
 		Nodo novo = new Nodo(dado);
 
 		if (totalElementos == 0) {
-			comeco = fim = novo;
+			começo = fim = novo;
 		}
 
 		fim.setProximo(novo);
@@ -49,7 +49,7 @@ public class ListaDuplamenteEncadeada {
 			Nodo aux = new Nodo();
 			aux = fim;
 
-			comeco = fim = null;
+			começo = fim = null;
 
 			totalElementos--;
 			return aux;
@@ -68,15 +68,15 @@ public class ListaDuplamenteEncadeada {
 		if (totalElementos == 1) {
 
 			Nodo aux = new Nodo();
-			aux = comeco;
+			aux = começo;
 
-			comeco = fim = null;
+			começo = fim = null;
 			totalElementos--;
 			return aux;
 		} else if (totalElementos > 0) {
 			Nodo aux = new Nodo();
-			aux = comeco;
-			comeco = comeco.getProximo();
+			aux = começo;
+			começo = começo.getProximo();
 
 			totalElementos--;
 			return aux;
@@ -86,7 +86,7 @@ public class ListaDuplamenteEncadeada {
 	}
 
 	public Nodo getPrimeiroElemento() {
-		return comeco;
+		return começo;
 	}
 
 	public Nodo getUltimoElemento() {
@@ -104,7 +104,7 @@ public class ListaDuplamenteEncadeada {
 			return ("[]");
 
 		String s = "[";
-		for (Nodo aux = comeco; aux != fim; aux = aux.getProximo()) {
+		for (Nodo aux = começo; aux != fim; aux = aux.getProximo()) {
 
 			s += aux.getDado().toString() + ", ";
 		}
@@ -115,7 +115,7 @@ public class ListaDuplamenteEncadeada {
 
 	public boolean contemElemento(Object dado) {
 
-		for (Nodo i = comeco; i != null; i = i.getProximo()) {
+		for (Nodo i = começo; i != null; i = i.getProximo()) {
 
 			if (i.getDado().equals(dado)) {
 				return true;
@@ -127,7 +127,7 @@ public class ListaDuplamenteEncadeada {
 
 	protected Nodo getElemento(int indice) {
 
-		Nodo aux = comeco;
+		Nodo aux = começo;
 
 		if (indice >= totalElementos) {
 			return null;
@@ -165,12 +165,12 @@ public class ListaDuplamenteEncadeada {
 
 		ListaDuplamenteEncadeada listAux = new ListaDuplamenteEncadeada();
 
-		for (Nodo i = fim; i != comeco; i = i.getAnterior()) {
+		for (Nodo i = fim; i != começo; i = i.getAnterior()) {
 
 			listAux.adicionaNoFim(i.getDado());
 
 		}
-		listAux.adicionaNoFim(comeco.getDado());
+		listAux.adicionaNoFim(começo.getDado());
 		return listAux;
 
 	}
@@ -179,7 +179,7 @@ public class ListaDuplamenteEncadeada {
 			throws NullPointerException {
 		ListaDuplamenteEncadeada cell = new ListaDuplamenteEncadeada();
 
-		for (Nodo i = comeco; i != fim; i = i.getProximo()) {
+		for (Nodo i = começo; i != fim; i = i.getProximo()) {
 
 			cell.adicionaNoFim(i.getDado());
 
@@ -194,12 +194,12 @@ public class ListaDuplamenteEncadeada {
 		ListaDuplamenteEncadeada novaSublista = new ListaDuplamenteEncadeada();
 
 		for (int i = 0; i < primeiraPos; i++) {
-			cell.comeco = cell.comeco.getProximo();
+			cell.começo = cell.começo.getProximo();
 		}
 
 		for (int j = primeiraPos; j <= ultimaPos; j++) {
-			novaSublista.adicionaNoFim(cell.comeco.getDado());
-			cell.comeco = cell.comeco.getProximo();
+			novaSublista.adicionaNoFim(cell.começo.getDado());
+			cell.começo = cell.começo.getProximo();
 		}
 		return novaSublista;
 	}
@@ -208,7 +208,7 @@ public class ListaDuplamenteEncadeada {
 
 		ListaDuplamenteEncadeada listAux = new ListaDuplamenteEncadeada();
 
-		for (Nodo i = comeco; i != fim; i = i.getProximo()) {
+		for (Nodo i = começo; i != fim; i = i.getProximo()) {
 
 			listAux.adicionaNoComeco(i.getDado());
 		}
