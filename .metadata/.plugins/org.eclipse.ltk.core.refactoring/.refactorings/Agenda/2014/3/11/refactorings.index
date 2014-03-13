@@ -3,3 +3,10 @@
 1394671325989	Rename method 'bubbleSort'
 1394673373406	Rename field 'começo'
 1394673594831	Delete element
+1394674793747	Rename type 'ArquivoFila'
+1394674875787	Rename local variable 'ObjetoFila'
+1394674897290	Rename local variable 'arquivoFila'
+1394674932416	Rename local variable 'arquivoFilaSelecionado'
+1394675967078	Rename package 'util'
+1394675977645	Delete element
+1394675981004	Delete element

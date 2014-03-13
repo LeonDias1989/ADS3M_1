@@ -1,0 +1,21 @@
+package util;
+
+import java.util.Scanner;
+
+public class Scan {
+
+	Scanner var = new Scanner(System.in);
+
+	public void inserirInteiro(int o) {
+
+		o = var.nextInt();
+
+	}
+	
+	public void inserirString(String o) {
+
+		o = var.nextLine();
+
+	}
+
+}

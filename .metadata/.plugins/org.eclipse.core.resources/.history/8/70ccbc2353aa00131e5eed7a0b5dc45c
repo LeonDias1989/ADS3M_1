@@ -1,0 +1,27 @@
+package utilitarios;
+
+import java.util.Scanner;
+
+public class ScanTest {
+	
+	public static void main(String[] args) {
+		
+		Scanner var = new Scanner (System.in);
+		
+		Scan s = new Scan();
+		
+		System.out.println("insira um valor inteiro : ");
+		
+		int a = s.inserirInteiro(var);
+		
+		System.out.println("Valor: " +a);
+		
+		
+		System.out.println("Insira um nome: ");
+		
+		
+		
+		
+	}
+
+}
