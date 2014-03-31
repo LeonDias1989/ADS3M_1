@@ -1,3 +1,4 @@
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="Estrutura.ListaDuplamenteEncadeada"><rhs name\="Estrutura.ListaOrdenada"/><rhs name\="Estrutura.ListaDuplamenteEncadeada"/></lhs><lhs name\="Estrutura.ListaOrdenada"><rhs name\="Estrutura.ListaOrdenada"/></lhs><lhs name\="util.Scan"><rhs name\="util.Scan"/></lhs><lhs name\="utilitarios.Arquivo"><rhs name\="utilitarios.Arquivo"/></lhs><lhs name\="Contato.Contato"><rhs name\="Contato.Contato"/></lhs><lhs name\="Repositor.RepositorioContato"><rhs name\="Repositor.RepositorioContato"/></lhs></history>
 content_assist_number_of_computers=13
 content_assist_proposals_background=255,255,255
 content_assist_proposals_foreground=0,0,0

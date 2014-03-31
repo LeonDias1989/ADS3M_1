@@ -1,0 +1,22 @@
+5. Antes do início da partida, o sistema deve distribuir, no tabuleiro, “navios” com as
+seguintes configurações:!
+1. 1 “porta-aviões” com 5 unidades de tamanho.!
+2. 2 “destroyers” com 4 unidades de tamanho.!
+3. 2 “fragatas” com 3 unidades de tamanho.!
+4. 3 “torpedeiros” com 2 unidades de tamanho.!
+5. 5 submarinos, com 1 unidade de tamanho.! //TODO terminar de implementar o método iniciarCampo()
+
+
+6. Os “navios” não podem ficar um em cima do outro, mas podem ficar “ao lado” um do
+outro.!
+
+
+7. O sistema deve controlar o número de pontos de um jogador.!
+
+
+9. Ao acertar um pedaço de um “navio”, o jogador ganha 3 pontos. Ao destruir um “navio”
+o jogador ganha 5 pontos.! //TODO
+
+
+
+

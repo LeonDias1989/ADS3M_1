@@ -1,0 +1,7 @@
+nome	quant	tam	total
+
+Sub	5	1	5
+TOP	3	2	6
+FRA	2	3	6
+DES	2	4	8
+POR	1	5	5
