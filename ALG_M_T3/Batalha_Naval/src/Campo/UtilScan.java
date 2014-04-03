@@ -15,4 +15,9 @@ public class UtilScan {
 		return var.nextInt();
 	}
 
+	public String scanString() {
+
+		return var.next();
+	}
+
 }
