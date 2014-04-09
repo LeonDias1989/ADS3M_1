@@ -11,4 +11,10 @@ public class GeradoRandom {
 		return r.nextInt(10);
 	}
 
+	public int gerarBin() {
+
+		return r.nextInt(2);
+
+	}
+
 }

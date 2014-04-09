@@ -7,6 +7,7 @@ public class Campo {
 			"[ E ]", "[ F ]", "[ G ]", "[ H ]", "[ I ]", "[ J ]" };
 
 	public Campo() {
+
 		inicarCampo();
 	}
 
@@ -39,6 +40,24 @@ public class Campo {
 		}
 	}
 
+	private boolean estaVazia(int i, int j) {
+
+		boolean result = false;
+
+		for (int k = 0; k < campo.length; k++) {
+			for (int k2 = 0; k2 < campo.length; k2++) {
+				if (i == k && j == k2) {
+
+					if (campo[k][k2] == null) {
+						result = true;
+					}
+				}
+			}
+		}
+
+		return result;
+	}
+
 	private void inicarCampo() {
 
 		GeradoRandom gr = new GeradoRandom();
@@ -49,43 +68,124 @@ public class Campo {
 		int countDestroyer = 0;
 		int countPortAvioes = 0;
 
-		int linha, coluna;
+		int linha, coluna, resultXy;
 
-		for (int i = 0; i < campo.length; i++) {
-			for (int j = 0; j < campo.length; j++) {
+		for (int i = 0; i < 100; i++) {
 
-				linha = gr.gerarNumero();
-				coluna = gr.gerarNumero();
+			linha = gr.gerarNumero();
+			coluna = gr.gerarNumero();
 
+			resultXy = gr.gerarBin();
+
+			switch (resultXy) {
+			case 0:
 				if (campo[linha][coluna] == null && countSubmarino < 5) {
 
-					campo[linha][coluna] = "[Sub]";
+					campo[linha][coluna] = "[SUB]";
 					countSubmarino++;
 
-				} else if (campo[linha][coluna] == null && countTorped < 3) {
+				}
+
+				if (estaVazia(linha, coluna) && estaVazia(linha, (coluna + 1))
+						&& countTorped < 3) {
 
 					campo[linha][coluna] = "[TOP]";
+					campo[linha][coluna + 1] = "[TOP]";
 
 					countTorped++;
-				} else if (campo[linha][coluna] == null && countFragata < 2) {
+				} else if (estaVazia(linha, coluna)
+						&& estaVazia(linha, (coluna + 1))
+						&& estaVazia(linha, (coluna + 2)) && countFragata < 2) {
 
 					campo[linha][coluna] = "[FRA]";
+					campo[linha][coluna + 1] = "[FRA]";
+					campo[linha][coluna + 2] = "[FRA]";
 
 					countFragata++;
-				} else if (campo[linha][coluna] == null && countDestroyer < 2) {
+				} else if (estaVazia(linha, coluna)
+						&& estaVazia(linha, (coluna + 1))
+						&& estaVazia(linha, (coluna + 2))
+						&& estaVazia(linha, (coluna + 3)) && countDestroyer < 2) {
 
 					campo[linha][coluna] = "[DES]";
+					campo[linha][coluna + 1] = "[DES]";
+					campo[linha][coluna + 2] = "[DES]";
+					campo[linha][coluna + 3] = "[DES]";
 
 					countDestroyer++;
-				} else if (campo[linha][coluna] == null && countPortAvioes < 1) {
+				} else if (estaVazia(linha, coluna)
+						&& estaVazia(linha, (coluna + 1))
+						&& estaVazia(linha, (coluna + 2))
+						&& estaVazia(linha, (coluna + 3))
+						&& estaVazia(linha, (coluna + 4))
+						&& countPortAvioes < 1) {
 
 					campo[linha][coluna] = "[POR]";
+					campo[linha][coluna + 1] = "[POR]";
+					campo[linha][coluna + 2] = "[POR]";
+					campo[linha][coluna + 3] = "[POR]";
+					campo[linha][coluna + 4] = "[POR]";
 
 					countPortAvioes++;
 				}
-			}
+				break;
+			case 1:
+				if (campo[linha][coluna] == null && countSubmarino < 5) {
 
+					campo[linha][coluna] = "[SUB]";
+					countSubmarino++;
+
+				}
+
+				if (estaVazia(linha, coluna) && estaVazia(linha + 1, coluna)
+						&& countTorped < 3) {
+
+					campo[linha][coluna] = "[TOP]";
+					campo[linha + 1][coluna] = "[TOP]";
+
+					countTorped++;
+				} else if (estaVazia(linha, coluna)
+						&& estaVazia(linha + 1, coluna)
+						&& estaVazia(linha + 2, coluna) && countFragata < 2) {
+
+					campo[linha][coluna] = "[FRA]";
+					campo[linha + 1][coluna] = "[FRA]";
+					campo[linha + 2][coluna] = "[FRA]";
+
+					countFragata++;
+				} else if (estaVazia(linha, coluna)
+						&& estaVazia(linha + 1, coluna)
+						&& estaVazia(linha + 2, coluna)
+						&& estaVazia(linha + 3, coluna) && countDestroyer < 2) {
+
+					campo[linha][coluna] = "[DES]";
+					campo[linha + 1][coluna] = "[DES]";
+					campo[linha + 2][coluna] = "[DES]";
+					campo[linha + 3][coluna] = "[DES]";
+
+					countDestroyer++;
+				} else if (estaVazia(linha, coluna)
+						&& estaVazia(linha + 1, coluna)
+						&& estaVazia(linha + 2, coluna)
+						&& estaVazia(linha + 3, coluna)
+						&& estaVazia(linha + 4, coluna) && countPortAvioes < 1) {
+
+					campo[linha][coluna] = "[POR]";
+					campo[linha + 1][coluna] = "[POR]";
+					campo[linha + 2][coluna] = "[POR]";
+					campo[linha + 3][coluna] = "[POR]";
+					campo[linha + 4][coluna] = "[POR]";
+
+					countPortAvioes++;
+				}
+
+				break;
+
+			default:
+				break;
+			}
 		}
+
 	}
 
 	/** show the field open to user */
@@ -133,32 +233,23 @@ public class Campo {
 		return flag;
 
 	}
-	
-	/*
-	 * TODO
-	 * OS NAVIOS ESTÃO EM SEUS TOTAIS E NÃO EM SUAS QUANTIDADES, 
-	 * POR EXEMPLO: O TORPEDO OCUPA DUAS POSIÇÕES, LOGO O VALOR TOTAL MUDARÁ
-	 * 2 DE TORPEDOS, SENDO QUE TEM 3 TORPEDOS LOGO O RESULTADO É 6
-	 * CONCLUINDO: 
-	 * A VALIDAÇÃO NÃO SERÁ COM O NÚMERO 13 E SIM COM O NÚMERO: 30**/
-	public boolean todosDestruidos(){
-		
+
+	public boolean todosDestruidos() {
+
 		int count = 0;
-		
+
 		for (int i = 0; i < campo.length; i++) {
 			for (int j = 0; j < campo.length; j++) {
-				if (campo[i][j] == "[ O ]" ) {
+				if (campo[i][j] == "[ O ]") {
 					count++;
 				}
 			}
 		}
-		//TODO VALIDAR DEPOIS COM O NÚMERO 30
-		if (count==13) {
+		if (count == 30) {
 			return true;
-		}else
+		} else
 			return false;
-		
-		
+
 	}
 
 }
