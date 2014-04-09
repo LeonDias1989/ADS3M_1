@@ -9,7 +9,7 @@ public class Principal {
 
 		int pontos = 15;
 
-		while (pontos > 0) {
+		while (pontos > 0 || campo.todosDestruidos()) {
 
 			int linha, coluna = 0;
 			campo.telaUsuario();
