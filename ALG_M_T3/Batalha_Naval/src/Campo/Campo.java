@@ -86,14 +86,15 @@ public class Campo {
 
 				}
 
-				if (estaVazia(linha, coluna) && estaVazia(linha, (coluna + 1))
-						&& countTorped < 3) {
+				if (estaVazia(linha, coluna - 1) && estaVazia(linha, coluna)
+						&& estaVazia(linha, (coluna + 1)) && countTorped < 3) {
 
 					campo[linha][coluna] = "[TOP]";
 					campo[linha][coluna + 1] = "[TOP]";
 
 					countTorped++;
-				} else if (estaVazia(linha, coluna)
+				} else if (estaVazia(linha, coluna - 1)
+						&& estaVazia(linha, coluna)
 						&& estaVazia(linha, (coluna + 1))
 						&& estaVazia(linha, (coluna + 2)) && countFragata < 2) {
 
@@ -102,7 +103,8 @@ public class Campo {
 					campo[linha][coluna + 2] = "[FRA]";
 
 					countFragata++;
-				} else if (estaVazia(linha, coluna)
+				} else if (estaVazia(linha, coluna - 1)
+						&& estaVazia(linha, coluna)
 						&& estaVazia(linha, (coluna + 1))
 						&& estaVazia(linha, (coluna + 2))
 						&& estaVazia(linha, (coluna + 3)) && countDestroyer < 2) {
@@ -113,7 +115,8 @@ public class Campo {
 					campo[linha][coluna + 3] = "[DES]";
 
 					countDestroyer++;
-				} else if (estaVazia(linha, coluna)
+				} else if (estaVazia(linha, coluna - 1)
+						&& estaVazia(linha, coluna)
 						&& estaVazia(linha, (coluna + 1))
 						&& estaVazia(linha, (coluna + 2))
 						&& estaVazia(linha, (coluna + 3))
@@ -137,14 +140,15 @@ public class Campo {
 
 				}
 
-				if (estaVazia(linha, coluna) && estaVazia(linha + 1, coluna)
-						&& countTorped < 3) {
+				if (estaVazia(linha - 1, coluna) && estaVazia(linha, coluna)
+						&& estaVazia(linha + 1, coluna) && countTorped < 3) {
 
 					campo[linha][coluna] = "[TOP]";
 					campo[linha + 1][coluna] = "[TOP]";
 
 					countTorped++;
-				} else if (estaVazia(linha, coluna)
+				} else if (estaVazia(linha - 1, coluna)
+						&& estaVazia(linha, coluna)
 						&& estaVazia(linha + 1, coluna)
 						&& estaVazia(linha + 2, coluna) && countFragata < 2) {
 
@@ -153,7 +157,8 @@ public class Campo {
 					campo[linha + 2][coluna] = "[FRA]";
 
 					countFragata++;
-				} else if (estaVazia(linha, coluna)
+				} else if (estaVazia(linha - 1, coluna)
+						&& estaVazia(linha, coluna)
 						&& estaVazia(linha + 1, coluna)
 						&& estaVazia(linha + 2, coluna)
 						&& estaVazia(linha + 3, coluna) && countDestroyer < 2) {
@@ -164,7 +169,8 @@ public class Campo {
 					campo[linha + 3][coluna] = "[DES]";
 
 					countDestroyer++;
-				} else if (estaVazia(linha, coluna)
+				} else if (estaVazia(linha - 1, coluna)
+						&& estaVazia(linha, coluna)
 						&& estaVazia(linha + 1, coluna)
 						&& estaVazia(linha + 2, coluna)
 						&& estaVazia(linha + 3, coluna)
