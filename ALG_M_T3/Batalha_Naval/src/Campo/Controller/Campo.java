@@ -5,7 +5,6 @@ import Campo.utils.GeradoRandom;
 public class Campo {
 
 	private String[][] campo = new String[10][10];
-	
 
 	public Campo() {
 
@@ -38,13 +37,7 @@ public class Campo {
 
 		GeradoRandom gr = new GeradoRandom();
 
-		int countSubmarino = 0;
-		int countTorped = 0;
-		int countFragata = 0;
-		int countDestroyer = 0;
-		int countPortAvioes = 0;
-
-		int linha, coluna, resultXy;
+		int countSubmarino = 0, countTorped = 0, countFragata = 0, countDestroyer = 0, countPortAvioes = 0, linha, coluna, resultXy;
 
 		for (int i = 0; i < 100; i++) {
 
@@ -160,7 +153,6 @@ public class Campo {
 
 					countPortAvioes++;
 				}
-
 				break;
 
 			default:
@@ -171,7 +163,6 @@ public class Campo {
 	}
 
 	/** show the field open to user */
-	
 
 	public boolean atacar(int linha, int coluna) {
 
