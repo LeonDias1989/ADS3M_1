@@ -1,15 +1,19 @@
-package Campo;
+package Campo.App;
+
+import Campo.View.CampoView;
+import Campo.utils.UtilScan;
 
 public class Principal {
 
 	public static void main(String[] args) {
 
-		Campo campo = new Campo();
+		CampoView campo = new CampoView();
+
 		UtilScan us = new UtilScan();
 
 		int pontos = 15;
 
-		while (pontos > 0 || campo.todosDestruidos()) {
+		while (pontos > 0 || campo.getCampo().todosDestruidos()) {
 
 			int linha, coluna = 0;
 			campo.telaUsuario();
@@ -55,14 +59,14 @@ public class Principal {
 				break;
 			}
 
-			boolean condition = campo.atacar(linha, coluna);
+			boolean condition = campo.getCampo().atacar(linha, coluna);
 			pontos--;
 
-			System.out.println(condition);
+			System.out.println("\nAcertou: " + condition);
 			if (condition) {
 				pontos += 3;
 			}
-
+			System.out.println("Pontos: " + pontos);
 		}
 		campo.mostrarCampo();
 		System.out.println("FIM DE JOGO");

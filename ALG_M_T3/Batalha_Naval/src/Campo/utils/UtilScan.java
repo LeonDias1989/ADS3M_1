@@ -1,4 +1,4 @@
-package Campo;
+package Campo.utils;
 
 import java.util.Scanner;
 

@@ -1,43 +1,19 @@
-package Campo;
+package Campo.Controller;
+
+import Campo.utils.GeradoRandom;
 
 public class Campo {
 
 	private String[][] campo = new String[10][10];
-	private String[] colunas = { "     ", "[ A ]", "[ B ]", "[ C ]", "[ D ]",
-			"[ E ]", "[ F ]", "[ G ]", "[ H ]", "[ I ]", "[ J ]" };
+	
 
 	public Campo() {
 
 		inicarCampo();
 	}
 
-	public void telaUsuario() {
-
-		for (int i = 0; i < colunas.length; i++) {
-			System.out.print(colunas[i]);
-		}
-		System.out.println();
-
-		for (int l = 0; l < campo.length; l++) {
-			System.out.print("[ " + l + " ]");
-			for (int c = 0; c < campo.length; c++) {
-
-				if (campo[l][c] == "[ O ]") {
-
-					System.out.print("[ O ]");
-
-				} else if (campo[l][c] == "[ - ]") {
-
-					System.out.print("[ - ]");
-
-				} else {
-
-					System.out.print("[ . ]");
-				}
-
-			}
-			System.out.println();
-		}
+	public String[][] getCampo() {
+		return campo;
 	}
 
 	private boolean estaVazia(int i, int j) {
@@ -195,28 +171,7 @@ public class Campo {
 	}
 
 	/** show the field open to user */
-	public void mostrarCampo() {
-
-		for (int i = 0; i < colunas.length; i++) {
-			System.out.print(colunas[i]);
-		}
-		System.out.println();
-
-		for (int i = 0; i < campo.length; i++) {
-			System.out.print("[ " + i + " ]");
-			for (int j = 0; j < campo.length; j++) {
-
-				if (campo[i][j] == null) {
-
-					System.out.print("[ . ]");
-
-				} else
-
-					System.out.print(campo[i][j]);
-			}
-			System.out.println();
-		}
-	}
+	
 
 	public boolean atacar(int linha, int coluna) {
 
