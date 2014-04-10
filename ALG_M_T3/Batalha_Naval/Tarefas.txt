@@ -1,6 +1,3 @@
-7. O sistema deve controlar o número de pontos de um jogador.!
-
-
 9. Ao acertar um pedaço de um “navio”, o jogador ganha 3 pontos. Ao destruir um “navio”
 o jogador ganha 5 pontos.! //TODO
 

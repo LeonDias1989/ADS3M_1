@@ -52,7 +52,7 @@ public class CampoView {
 		System.out.println();
 
 		for (int i = 0; i < campo.getCampo().length; i++) {
-			System.out.print("[ " + i + " ]");
+			System.out.print(linhas[i]);
 			for (int j = 0; j < campo.getCampo().length; j++) {
 
 				if (campo.getCampo()[i][j] == null) {
