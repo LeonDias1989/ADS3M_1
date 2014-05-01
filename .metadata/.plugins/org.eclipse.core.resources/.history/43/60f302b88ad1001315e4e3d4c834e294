@@ -1,0 +1,68 @@
+package Test;
+
+import Contato.Contato;
+import Estrutura.ListaEncadeada;
+
+public class Testes {
+
+	public static void main(String[] args) {
+		
+		Contato a = new Contato("Aurélio", "51 91839297");
+		Contato b = new Contato("Maria Alencar", "51 33935677");
+		Contato c = new Contato("Aaron", "51 82828282");
+		Contato d = new Contato("Dilma da Silva", "51 91171171");
+		Contato f = new Contato("Felizberto Tome da Cunha", "SEM TELEFONE");
+		
+		ListaEncadeada<String> listaTelefonica = new ListaEncadeada<>();
+		ListaEncadeada<String> listaTelefonica2 = new ListaEncadeada<>();
+		
+		
+
+//		listaTelefonica.adicionaNoFim(b);
+//		listaTelefonica.adicionaNoFim(f);
+//		listaTelefonica.adicionaNoFim(d);
+//		listaTelefonica.adicionaNoFim(a);
+//		listaTelefonica.adicionaNoFim(c);
+		
+		listaTelefonica.inserirNoFinal("Z");
+		listaTelefonica.inserirNoFinal("Y");
+		listaTelefonica.inserirNoFinal("W");
+		listaTelefonica.inserirNoFinal("X");
+		listaTelefonica.inserirNoFinal("V");
+		listaTelefonica.inserirNoFinal("U");
+		listaTelefonica.inserirNoFinal("T");
+		listaTelefonica.inserirNoFinal("S");
+		listaTelefonica.inserirNoFinal("R");
+		listaTelefonica.inserirNoFinal("Q");
+		listaTelefonica.inserirNoFinal("P");
+		listaTelefonica.inserirNoFinal("O");
+		listaTelefonica.inserirNoFinal("N");
+		listaTelefonica.inserirNoFinal("M");
+		listaTelefonica.inserirNoFinal("L");
+		listaTelefonica.inserirNoFinal("K");
+		listaTelefonica.inserirNoFinal("J");
+		listaTelefonica.inserirNoFinal("I");
+		listaTelefonica.inserirNoFinal("H");
+		listaTelefonica.inserirNoFinal("G");
+		listaTelefonica.inserirNoFinal("F");
+		listaTelefonica.inserirNoFinal("E");
+		listaTelefonica.inserirNoFinal("D");
+		listaTelefonica.inserirNoFinal("C");
+		listaTelefonica.inserirNoFinal("B");
+		listaTelefonica.inserirNoFinal("A");
+		
+		
+		
+		System.out.println("Exibindo elementos Desordenados: ");
+		System.out.println(listaTelefonica.toString());
+		
+		System.out.println("\nExibindo elementos Ordenados: ");
+		System.out.println(listaTelefonica2.toString());
+		
+		
+		
+		
+
+	}
+
+}

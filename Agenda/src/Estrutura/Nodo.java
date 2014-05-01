@@ -1,50 +1,47 @@
 package Estrutura;
 
-import java.io.Serializable;
+public class Nodo<T> {
 
-@SuppressWarnings("serial")
-public class Nodo implements Serializable {
+	private T dado;
+	private Nodo<T> proximo;
+	private Nodo<T> anterior;
 
-	
-	private Nodo proxima;
-	private Nodo anterior;
-	private Object dado;
+	public Nodo() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 
-	public Nodo(Object dado) {
+	public Nodo(T dado) {
+		super();
 		this.dado = dado;
 	}
 
-	public Nodo() {
-		// Default Constructor
-	}
-
-	public Object getDado() {
+	public T getDado() {
 		return dado;
 	}
 
-	public Nodo getAnterior() {
+	public void setDado(T dado) {
+		this.dado = dado;
+	}
+
+	public Nodo<T> getProximo() {
+		return proximo;
+	}
+
+	public void setProximo(Nodo<T> proximo) {
+		this.proximo = proximo;
+	}
+
+	public Nodo<T> getAnterior() {
 		return anterior;
 	}
 
-	public void setAnterior(Nodo anterior) {
+	public void setAnterior(Nodo<T> anterior) {
 		this.anterior = anterior;
-	}
-
-	public void setProximo(Nodo proxima) {
-		this.proxima = proxima;
-	}
-
-	public Nodo getProximo() {
-		return proxima;
-	}
-
-	public void setDado(Object dado) {
-		this.dado = dado;
 	}
 
 	@Override
 	public String toString() {
-
 		return "" + dado;
 	}
 
