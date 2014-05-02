@@ -1,7 +1,0 @@
-package Repositor;
-
-import Contato.*;
-
-public class RepositorioContato {
-
-}

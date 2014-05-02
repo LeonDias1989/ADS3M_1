@@ -15,7 +15,7 @@ public class Contato implements Comparable<Contato>, Serializable {
 	}
 
 	public Contato() {
-		// TODO Auto-generated constructor stub
+
 	}
 
 	public String getNome() {

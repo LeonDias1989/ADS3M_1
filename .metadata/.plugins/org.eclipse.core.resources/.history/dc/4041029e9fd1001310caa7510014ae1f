@@ -1,0 +1,25 @@
+package Contato;
+
+import Estrutura.ListaEncadeada;
+
+public class RepositorioContato {
+
+	private ListaEncadeada<Contato> lista = new ListaEncadeada<>();
+
+	public ListaEncadeada<Contato> getLista() {
+		return lista;
+	}
+
+	public Contato adicionar(Contato c) {
+
+		lista.inserirNoFinal(c);
+
+		return c;
+	}
+
+	public void ordenarLista() {
+
+		lista.ordenarPorBubble();
+	}
+
+}

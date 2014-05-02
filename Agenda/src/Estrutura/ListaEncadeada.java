@@ -1,5 +1,11 @@
 package Estrutura;
 
+import java.io.ObjectInputStream.GetField;
+
+import javax.swing.plaf.basic.BasicBorders.ToggleButtonBorder;
+
+import Contato.Contato;
+
 public class ListaEncadeada<T> {
 
 	private Nodo<T> cabeca;
@@ -204,6 +210,74 @@ public class ListaEncadeada<T> {
 		s += cauda.getDado();
 		s += "]";
 		return s;
+	}
+
+	public void ordenarPorBubble() {
+
+		for (int i = 0; i < totalElementos; i++) {
+			for (int j = i + 1; j < totalElementos; j++) {
+
+				Object x = getElemento(i).getDado();
+				Object y = getElemento(j).getDado();
+
+				if (x instanceof Comparable && y instanceof Comparable) {
+
+					int comparacao;
+
+					comparacao = ((Comparable) x).compareTo((Comparable) y);
+
+					if (comparacao > 0) {
+
+						Object aux2 = getElemento(j).getDado();
+						getElemento(j).setDado(getElemento(i).getDado());
+						getElemento(i).setDado((T) aux2);
+					}
+				}
+			}
+		}
+	}
+
+	public boolean buscaBinaria(ListaEncadeada<Contato> lista, String nome) {
+
+		boolean achou = false;
+		int alto = totalElementos - 1;
+		int baixo = 0;
+		int meio = alto / 2;
+
+		while ((achou == false) && alto >= baixo) {
+
+			if (lista.getElemento(meio).getDado().getNome().compareTo(nome) == 0) {
+				achou = true;
+			} else if (lista.getElemento(meio).getDado().getNome()
+					.compareTo(nome) > 0) {
+				alto = meio - 1;
+			} else {
+				baixo = meio + 1;
+			}
+			meio = (alto + baixo) / 2;
+		}
+
+		return achou;
+
+	}
+
+	public static void main(String[] args) {
+
+		ListaEncadeada<Contato> listaDeContato = new ListaEncadeada<>();
+
+		listaDeContato.inserirNoFinal(new Contato("E", "666"));
+		listaDeContato.inserirNoFinal(new Contato("B", "456"));
+		listaDeContato.inserirNoFinal(new Contato("Leon", "123"));
+		listaDeContato.inserirNoFinal(new Contato("D", "333"));
+		listaDeContato.inserirNoFinal(new Contato("C", "789"));
+		listaDeContato.inserirNoFinal(new Contato("F", "132"));
+
+		listaDeContato.ordenarPorBubble();
+
+		boolean b = listaDeContato.buscaBinaria(listaDeContato, "Leon");
+		
+		System.out.println(b);
+
 	}
 
 }

@@ -8,7 +8,6 @@ public class Nodo<T> {
 
 	public Nodo() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public Nodo(T dado) {
