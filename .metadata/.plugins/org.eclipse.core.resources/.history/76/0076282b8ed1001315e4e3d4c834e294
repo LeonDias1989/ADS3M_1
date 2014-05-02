@@ -22,7 +22,7 @@ public class UtilScan {
 
 	public void cleanBuffer() {
 
-		var.reset();
+		var.close();
 	}
 
 }

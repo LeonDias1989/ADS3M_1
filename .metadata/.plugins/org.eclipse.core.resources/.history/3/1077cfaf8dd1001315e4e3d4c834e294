@@ -16,13 +16,4 @@ public class UtilScan {
 		return var.next();
 	}
 
-	public Scanner getVar() {
-		return var;
-	}
-
-	public void cleanBuffer() {
-
-		var.reset();
-	}
-
 }

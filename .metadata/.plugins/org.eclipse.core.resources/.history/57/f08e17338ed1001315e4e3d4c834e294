@@ -61,7 +61,7 @@ public class Principal {
 
 			boolean condition = campo.getCampo().atacar(linha, coluna);
 			pontos--;
-			us.cleanBuffer();
+
 			System.out.println("\nAcertou: " + condition);
 			if (condition) {
 				pontos += 3;

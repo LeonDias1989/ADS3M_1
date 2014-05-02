@@ -58,16 +58,16 @@ public class Principal {
 			default:
 				break;
 			}
-
+			//Limpar Buffer do Scanner
+			us.scanString();
 			boolean condition = campo.getCampo().atacar(linha, coluna);
 			pontos--;
-			us.cleanBuffer();
+
 			System.out.println("\nAcertou: " + condition);
 			if (condition) {
 				pontos += 3;
 			}
 			System.out.println("Pontos: " + pontos);
-
 		}
 		campo.mostrarCampo();
 		System.out.println("FIM DE JOGO");
