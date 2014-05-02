@@ -16,8 +16,8 @@
 <fullyQualifiedTypeName name="java.lang.Comparable"/>
 <fullyQualifiedTypeName name="javax.swing.plaf.basic.BasicBorders.ToggleButtonBorder"/>
 <fullyQualifiedTypeName name="java.io.ObjectInputStream.GetField"/>
-<fullyQualifiedTypeName name="Estrutura.Nodo"/>
 <fullyQualifiedTypeName name="java.lang.Object"/>
-<fullyQualifiedTypeName name="Estrutura.ListaEncadeada"/>
 <fullyQualifiedTypeName name="Contato.RepositorioContato"/>
+<fullyQualifiedTypeName name="Estrutura.Nodo"/>
+<fullyQualifiedTypeName name="Estrutura.ListaEncadeada"/>
 </qualifiedTypeNameHistroy>

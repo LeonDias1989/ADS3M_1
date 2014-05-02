@@ -1,9 +1,5 @@
 package Estrutura;
 
-import java.io.ObjectInputStream.GetField;
-
-import javax.swing.plaf.basic.BasicBorders.ToggleButtonBorder;
-
 import Contato.Contato;
 
 public class ListaEncadeada<T> {
