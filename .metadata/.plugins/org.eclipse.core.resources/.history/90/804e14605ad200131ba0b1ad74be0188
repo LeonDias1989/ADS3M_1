@@ -1,0 +1,40 @@
+package busca_binaria;
+
+public class Contato<T> implements Comparable<Contato> {
+
+	private T nome;
+	private String telefone;
+
+	public Contato(T nome, String telefone) {
+		super();
+		this.nome = nome;
+		this.telefone = telefone;
+	}
+
+	public T getNome() {
+		return nome;
+	}
+
+	public void setNome(T nome) {
+		this.nome = nome;
+	}
+
+	public String getTelefone() {
+		return telefone;
+	}
+
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
+
+	@Override
+	public int compareTo(Contato p) {
+		return this.getNome().compareTo(p.getNome());
+	}
+
+	@Override
+	public String toString() {
+		return "Pessoa [nome=" + nome + ", idade=" + idade + "]\n";
+	}
+
+}
