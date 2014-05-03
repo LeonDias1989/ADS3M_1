@@ -1,0 +1,38 @@
+package Repositor;
+
+import Contato.Contato;
+import Estrutura.ListaEncadeada;
+
+public class RepositorioContato {
+
+	private ListaEncadeada<Contato> lista;
+
+	public RepositorioContato() {
+		lista = new ListaEncadeada<>();
+	}
+
+	public ListaEncadeada<Contato> getLista() {
+		return lista;
+	}
+
+	public Contato adicionar(Contato contato) {
+
+		lista.inserirNoFinal(contato);
+
+		return contato;
+	}
+	
+	public static void main(String[] args) {
+		
+		RepositorioContato lista = new RepositorioContato();
+		
+		lista.adicionar(new Contato("ABC", "1234"));
+		lista.adicionar(new Contato("CDE", "2334"));
+		lista.adicionar(new Contato("XXX", "934753"));
+		
+		
+		
+	}
+	
+
+}
