@@ -8,16 +8,19 @@
 <fullyQualifiedTypeName name="Estrutura.ListaDuplamenteEncadeada"/>
 <fullyQualifiedTypeName name="utilitarios.Arquivo"/>
 <fullyQualifiedTypeName name="java.io.Serializable"/>
-<fullyQualifiedTypeName name="Repositor.RepositorioContato"/>
 <fullyQualifiedTypeName name="Utilitarios.Arquivo"/>
-<fullyQualifiedTypeName name="Contato.Contato"/>
 <fullyQualifiedTypeName name="java.util.Collections"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.lang.Comparable"/>
 <fullyQualifiedTypeName name="javax.swing.plaf.basic.BasicBorders.ToggleButtonBorder"/>
 <fullyQualifiedTypeName name="java.io.ObjectInputStream.GetField"/>
-<fullyQualifiedTypeName name="java.lang.Object"/>
 <fullyQualifiedTypeName name="Contato.RepositorioContato"/>
-<fullyQualifiedTypeName name="Estrutura.Nodo"/>
+<fullyQualifiedTypeName name="Repositor.RepositorioContato"/>
+<fullyQualifiedTypeName name="Contato.Contato"/>
 <fullyQualifiedTypeName name="Estrutura.ListaEncadeada"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="java.lang.Object"/>
+<fullyQualifiedTypeName name="Estrutura.Nodo"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.LinkedList"/>
 </qualifiedTypeNameHistroy>

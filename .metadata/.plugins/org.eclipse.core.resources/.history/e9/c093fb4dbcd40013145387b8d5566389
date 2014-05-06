@@ -1,0 +1,61 @@
+package ordenacao.selection_sort;
+
+public class SelectionSort {
+
+	private int[] vetor;
+
+	public SelectionSort(int[] vetor) {
+		super();
+		this.vetor = vetor;
+	}
+
+	public int[] getVetor() {
+		return vetor;
+	}
+
+	public void setVetor(int[] vetor) {
+		this.vetor = vetor;
+	}
+
+	public int[] ordenar() {
+
+		for (int i0 = 0; i0 < vetor.length; i0++) {
+
+			for (int i = i0 + 1; i < vetor.length; i++) {
+
+				if (vetor[i0] > vetor[i]) {
+					swap(i0, i);
+				}
+			}
+		}
+
+		return vetor;
+	}
+	
+	private void swap(int j, int aposJ) {
+		int aux = vetor[j];
+		vetor[j] = vetor[aposJ];
+		vetor[aposJ] = aux;
+	}
+
+	public static void main(String[] args) {
+
+		int[] vetor = { 6, 2, 1, 8, 4, 5, 9, 3, 7, 10 };
+
+		SelectionSort ss = new SelectionSort(vetor);
+
+		System.out.println("Antes de Ordenar: \n");
+		for (int i = 0; i < vetor.length; i++) {
+			System.out.print(vetor[i] + " ");
+		}
+
+		ss.ordenar();
+
+		System.out.println("\nDepois de Ordenar: \n");
+		for (int i = 0; i < vetor.length; i++) {
+			System.out.print(vetor[i] + " ");
+		}
+	}
+
+
+}

@@ -1,0 +1,43 @@
+package ordenacao.selection_sort;
+
+public class SelectionSort {
+
+	private int[] vetor;
+
+	public SelectionSort(int[] vetor) {
+		super();
+		this.vetor = vetor;
+	}
+
+	public int[] getArray() {
+		return vetor;
+	}
+
+	public void setVetor(int[] vetor) {
+		this.vetor = vetor;
+	}
+
+	public int[] ordenarCrescente() {
+
+		for (int vFixo = 0; vFixo < vetor.length; vFixo++) {
+
+			for (int i = vFixo + 1; i < vetor.length; i++) {
+
+				if (vetor[vFixo] > vetor[i]) {
+					int a = vetor[vFixo];
+					vetor[vFixo] = vetor[i];
+					vetor[i] = a;
+				}
+			}
+		}
+
+		return vetor;
+	}
+
+	// public void swap(int j, int aposJ) {
+	// int aux = vetor[j];
+	// vetor[j] = vetor[aposJ];
+	// vetor[aposJ] = aux;
+	// }
+
+}
