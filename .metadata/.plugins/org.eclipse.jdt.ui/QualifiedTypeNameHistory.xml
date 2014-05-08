@@ -23,4 +23,7 @@
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.util.LinkedList"/>
+<fullyQualifiedTypeName name="ordenacao.heap_sort.HeapSort"/>
+<fullyQualifiedTypeName name="ordenacao.selection_sort.SelectionSort"/>
+<fullyQualifiedTypeName name="arvore_avl.ArvoreAVL"/>
 </qualifiedTypeNameHistroy>
