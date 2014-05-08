@@ -19,10 +19,10 @@ public class Principal {
 		a.exibirEmOrdem(a);
 		System.out.println();
 		System.out.print("PRE : ");
-		a.exibirpreordem(a);
+		a.exibirPreOrdem(a);
 		System.out.println();
 		System.out.print("POS : ");
-		a.exibirposordem(a);
+		a.exibirPosOrdem(a);
 		
 	}
 

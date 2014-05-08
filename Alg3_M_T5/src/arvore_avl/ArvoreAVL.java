@@ -42,24 +42,24 @@ public class ArvoreAVL {
 		if (d == 2) {
 			df = aux.dir.altd - aux.dir.alte;
 			if (df >= 0) {
-				aux = rotacao_esquerda(aux);
+				aux = rotacaoEsquerda(aux);
 			} else {
-				aux.dir = rotacao_direita(aux.dir);
-				aux = rotacao_esquerda(aux);
+				aux.dir = rotacaoDireita(aux.dir);
+				aux = rotacaoEsquerda(aux);
 			}
 		} else if (d == -2) {
 			df = aux.esq.altd - aux.esq.alte;
 			if (df <= 0) {
-				aux = rotacao_direita(aux);
+				aux = rotacaoDireita(aux);
 			} else {
-				aux.esq = rotacao_esquerda(aux.esq);
-				aux = rotacao_direita(aux);
+				aux.esq = rotacaoEsquerda(aux.esq);
+				aux = rotacaoDireita(aux);
 			}
 		}
 		return aux;
 	}
 
-	public ArvoreAVL rotacao_esquerda(ArvoreAVL aux) {
+	public ArvoreAVL rotacaoEsquerda(ArvoreAVL aux) {
 		ArvoreAVL aux1, aux2;
 		aux1 = aux.dir;
 		aux2 = aux1.esq;
@@ -81,7 +81,7 @@ public class ArvoreAVL {
 		return aux1;
 	}
 
-	public ArvoreAVL rotacao_direita(ArvoreAVL aux) {
+	public ArvoreAVL rotacaoDireita(ArvoreAVL aux) {
 		ArvoreAVL aux1, aux2;
 		aux1 = aux.esq;
 		aux2 = aux1.dir;
@@ -111,18 +111,18 @@ public class ArvoreAVL {
 		}
 	}
 
-	public void exibirpreordem(ArvoreAVL aux) {
+	public void exibirPreOrdem(ArvoreAVL aux) {
 		if (aux != null) {
 			System.out.print(aux.num + ", ");
-			exibirpreordem(aux.esq);
-			exibirpreordem(aux.dir);
+			exibirPreOrdem(aux.esq);
+			exibirPreOrdem(aux.dir);
 		}
 	}
 
-	public void exibirposordem(ArvoreAVL aux) {
+	public void exibirPosOrdem(ArvoreAVL aux) {
 		if (aux != null) {
-			exibirposordem(aux.esq);
-			exibirposordem(aux.dir);
+			exibirPosOrdem(aux.esq);
+			exibirPosOrdem(aux.dir);
 			System.out.print(aux.num + ", ");
 		}
 	}
