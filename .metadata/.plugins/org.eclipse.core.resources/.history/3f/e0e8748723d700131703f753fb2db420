@@ -1,6 +1,5 @@
 package Campo.Controller;
 
-import Campo.POJO.PortaAviao;
 import Campo.utils.GeradoRandom;
 
 public class Campo {
@@ -93,14 +92,11 @@ public class Campo {
 						&& estaVazia(linha, (coluna + 4))
 						&& countPortAvioes < 1) {
 
-					PortaAviao pA = new PortaAviao();
-					pA.preencher();
-
-					campo[linha][coluna] = pA.getEstrutura()[0][0];
-					campo[linha][coluna + 1] = pA.getEstrutura()[0][1];
-					campo[linha][coluna + 2] = pA.getEstrutura()[0][2];
-					campo[linha][coluna + 3] = pA.getEstrutura()[0][3];
-					campo[linha][coluna + 4] = pA.getEstrutura()[0][4];
+					campo[linha][coluna] = "[POR]";
+					campo[linha][coluna + 1] = "[POR]";
+					campo[linha][coluna + 2] = "[POR]";
+					campo[linha][coluna + 3] = "[POR]";
+					campo[linha][coluna + 4] = "[POR]";
 
 					countPortAvioes++;
 				}
@@ -149,15 +145,11 @@ public class Campo {
 						&& estaVazia(linha + 3, coluna)
 						&& estaVazia(linha + 4, coluna) && countPortAvioes < 1) {
 
-					PortaAviao pA = new PortaAviao();
-					pA.setHorizontal(false);
-					pA.preencher();
-
-					campo[linha][coluna] = pA.getEstrutura()[0][0];
-					campo[linha + 1][coluna] = pA.getEstrutura()[1][0];
-					campo[linha + 2][coluna] = pA.getEstrutura()[2][0];
-					campo[linha + 3][coluna] = pA.getEstrutura()[3][0];
-					campo[linha + 4][coluna] = pA.getEstrutura()[4][0];
+					campo[linha][coluna] = "[POR]";
+					campo[linha + 1][coluna] = "[POR]";
+					campo[linha + 2][coluna] = "[POR]";
+					campo[linha + 3][coluna] = "[POR]";
+					campo[linha + 4][coluna] = "[POR]";
 
 					countPortAvioes++;
 				}

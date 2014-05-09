@@ -150,8 +150,8 @@ public class Campo {
 						&& estaVazia(linha + 4, coluna) && countPortAvioes < 1) {
 
 					PortaAviao pA = new PortaAviao();
-					pA.setHorizontal(false);
 					pA.preencher();
+					pA.setHorizontal(false);
 
 					campo[linha][coluna] = pA.getEstrutura()[0][0];
 					campo[linha + 1][coluna] = pA.getEstrutura()[1][0];
