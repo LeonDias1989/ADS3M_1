@@ -1,0 +1,13 @@
+package arvore_bin;
+
+public class ArvoreBin {
+
+	public void inserir(Nodo n, int valor) {
+
+		if (n.getDado() > valor) {
+
+		}
+
+	}
+
+}
