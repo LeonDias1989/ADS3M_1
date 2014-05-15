@@ -1,0 +1,215 @@
+package Campo.Controller;
+
+import Campo.POJO.PortaAviao;
+import Campo.utils.GeradoRandom;
+
+public class Campo {
+
+	private String[][] campo = new String[10][10];
+
+	public Campo() {
+
+		inicarCampo();
+	}
+
+	public String[][] getCampo() {
+		return campo;
+	}
+
+	private boolean estaVazia(int i, int j) {
+
+		boolean result = false;
+
+		for (int k = 0; k < campo.length; k++) {
+			for (int k2 = 0; k2 < campo.length; k2++) {
+				if (i == k && j == k2) {
+
+					if (campo[k][k2] == null) {
+						result = true;
+					}
+				}
+			}
+		}
+
+		return result;
+	}
+
+	private void inicarCampo() {
+
+		GeradoRandom gr = new GeradoRandom();
+
+		int countSubmarino = 0, countTorped = 0, countFragata = 0, countDestroyer = 0, countPortAvioes = 0, linha, coluna, resultXy;
+
+		for (int i = 0; i < 100; i++) {
+
+			linha = gr.gerarNumero();
+			coluna = gr.gerarNumero();
+
+			resultXy = gr.gerarBin();
+
+			switch (resultXy) {
+			case 0:
+				if (campo[linha][coluna] == null && countSubmarino < 5) {
+
+					campo[linha][coluna] = "[SUB]";
+					countSubmarino++;
+
+				}
+
+				if (estaVazia(linha, coluna - 1) && estaVazia(linha, coluna)
+						&& estaVazia(linha, (coluna + 1)) && countTorped < 3) {
+
+					campo[linha][coluna] = "[TOP]";
+					campo[linha][coluna + 1] = "[TOP]";
+
+					countTorped++;
+				} else if (estaVazia(linha, coluna - 1)
+						&& estaVazia(linha, coluna)
+						&& estaVazia(linha, (coluna + 1))
+						&& estaVazia(linha, (coluna + 2)) && countFragata < 2) {
+
+					campo[linha][coluna] = "[FRA]";
+					campo[linha][coluna + 1] = "[FRA]";
+					campo[linha][coluna + 2] = "[FRA]";
+
+					countFragata++;
+				} else if (estaVazia(linha, coluna - 1)
+						&& estaVazia(linha, coluna)
+						&& estaVazia(linha, (coluna + 1))
+						&& estaVazia(linha, (coluna + 2))
+						&& estaVazia(linha, (coluna + 3)) && countDestroyer < 2) {
+
+					campo[linha][coluna] = "[DES]";
+					campo[linha][coluna + 1] = "[DES]";
+					campo[linha][coluna + 2] = "[DES]";
+					campo[linha][coluna + 3] = "[DES]";
+
+					countDestroyer++;
+				} else if (estaVazia(linha, coluna - 1)
+						&& estaVazia(linha, coluna)
+						&& estaVazia(linha, (coluna + 1))
+						&& estaVazia(linha, (coluna + 2))
+						&& estaVazia(linha, (coluna + 3))
+						&& estaVazia(linha, (coluna + 4))
+						&& countPortAvioes < 1) {
+
+					PortaAviao pA = new PortaAviao();
+					pA.preencher();
+
+					campo[linha][coluna] = pA.getEstrutura()[0][0];
+					campo[linha][coluna + 1] = pA.getEstrutura()[0][1];
+					campo[linha][coluna + 2] = pA.getEstrutura()[0][2];
+					campo[linha][coluna + 3] = pA.getEstrutura()[0][3];
+					campo[linha][coluna + 4] = pA.getEstrutura()[0][4];
+
+					countPortAvioes++;
+				}
+				break;
+			case 1:
+				if (campo[linha][coluna] == null && countSubmarino < 5) {
+
+					campo[linha][coluna] = "[SUB]";
+					countSubmarino++;
+
+				}
+
+				if (estaVazia(linha - 1, coluna) && estaVazia(linha, coluna)
+						&& estaVazia(linha + 1, coluna) && countTorped < 3) {
+
+					campo[linha][coluna] = "[TOP]";
+					campo[linha + 1][coluna] = "[TOP]";
+
+					countTorped++;
+				} else if (estaVazia(linha - 1, coluna)
+						&& estaVazia(linha, coluna)
+						&& estaVazia(linha + 1, coluna)
+						&& estaVazia(linha + 2, coluna) && countFragata < 2) {
+
+					campo[linha][coluna] = "[FRA]";
+					campo[linha + 1][coluna] = "[FRA]";
+					campo[linha + 2][coluna] = "[FRA]";
+
+					countFragata++;
+				} else if (estaVazia(linha - 1, coluna)
+						&& estaVazia(linha, coluna)
+						&& estaVazia(linha + 1, coluna)
+						&& estaVazia(linha + 2, coluna)
+						&& estaVazia(linha + 3, coluna) && countDestroyer < 2) {
+
+					campo[linha][coluna] = "[DES]";
+					campo[linha + 1][coluna] = "[DES]";
+					campo[linha + 2][coluna] = "[DES]";
+					campo[linha + 3][coluna] = "[DES]";
+
+					countDestroyer++;
+				} else if (estaVazia(linha - 1, coluna)
+						&& estaVazia(linha, coluna)
+						&& estaVazia(linha + 1, coluna)
+						&& estaVazia(linha + 2, coluna)
+						&& estaVazia(linha + 3, coluna)
+						&& estaVazia(linha + 4, coluna) && countPortAvioes < 1) {
+
+					PortaAviao pA = new PortaAviao();
+					pA.setHorizontal(false);
+					pA.preencher();
+
+					campo[linha][coluna] = pA.getEstrutura()[0][0];
+					campo[linha + 1][coluna] = pA.getEstrutura()[1][0];
+					campo[linha + 2][coluna] = pA.getEstrutura()[2][0];
+					campo[linha + 3][coluna] = pA.getEstrutura()[3][0];
+					campo[linha + 4][coluna] = pA.getEstrutura()[4][0];
+
+					countPortAvioes++;
+				}
+				break;
+
+			default:
+				break;
+			}
+		}
+
+	}
+
+	/** show the field open to user */
+
+	public boolean atacar(int linha, int coluna) {
+
+		boolean flag = false;
+
+		for (int i = 0; i < campo.length; i++) {
+			for (int j = 0; j < campo.length; j++) {
+				if (linha == i && coluna == j) {
+
+					if (campo[linha][coluna] != null) {
+						flag = true;
+						campo[i][j] = "[ O ]";
+					} else {
+						flag = false;
+						campo[i][j] = "[ - ]";
+					}
+				}
+			}
+		}
+		return flag;
+
+	}
+
+	public boolean todosDestruidos() {
+
+		int count = 0;
+
+		for (int i = 0; i < campo.length; i++) {
+			for (int j = 0; j < campo.length; j++) {
+				if (campo[i][j] == "[ O ]") {
+					count++;
+				}
+			}
+		}
+		if (count == 30) {
+			return true;
+		} else
+			return false;
+
+	}
+
+}
