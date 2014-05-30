@@ -1,0 +1,61 @@
+package arvore_bin;
+
+public class TreeGenericDate <T extends Comparable<T>>{
+	
+	public void inserir(NodoGeneric<T> n, T valor) {
+		
+		int compare = n.getDado().compareTo(valor);
+
+		if (compare > 0) {
+
+			if (n.getEsq() != null) {
+				inserir(n.getEsq(), valor);
+			} else {
+
+				NodoGeneric<T> novoNodo = new NodoGeneric<>(valor);
+				n.setEsq(novoNodo);
+			}
+		} else if (compare < 0) {
+
+			if (n.getDir() != null) {
+				inserir(n.getDir(), valor);
+			} else {
+
+				NodoGeneric<T> novoNodo = new NodoGeneric<>(valor);
+				n.setDir(novoNodo);
+			}
+		}
+
+	}
+
+	public T getRaiz(NodoGeneric<T> nodo) {
+
+		return nodo.getDado();
+	}
+
+	public void travessiaPre(NodoGeneric<T> nodo) {
+		if (nodo != null) {
+			System.out.print(nodo.getDado() + " ");
+			travessiaPre(nodo.getEsq());
+			travessiaPre(nodo.getDir());
+		}
+	}
+
+	public void travessiaPos(NodoGeneric<T> nodo) {
+		if (nodo != null) {
+			travessiaPos(nodo.getEsq());
+			travessiaPos(nodo.getDir());
+			System.out.print(nodo.getDado() + " ");
+		}
+	}
+
+	public void travessiaInf(Nodo no) {
+		if (no != null) {
+			travessiaPos(no.getEsq());
+			System.out.print(no.getDado() + " ");
+			travessiaPos(no.getDir());
+		}
+	}
+
+
+}
