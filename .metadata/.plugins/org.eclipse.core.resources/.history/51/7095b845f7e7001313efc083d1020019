@@ -37,7 +37,7 @@ public class HeapSort {
 			if (vetor[maximo].compareTo(vetor[posicao]) > 0) {
 				trocar(vetor, maximo, posicao);
 
-				// --USO DE RECURSÃO--
+				// USO DE RECURSÃO
 				maxHeapify(vetor, maximo, n);
 			}
 		}

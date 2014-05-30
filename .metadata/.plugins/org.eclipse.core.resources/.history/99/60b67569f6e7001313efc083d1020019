@@ -2,18 +2,12 @@ package ordenacao.heap_sort;
 
 public class HeapSort {
 
-	static int comparacoes, trocas;
-
 	public static <T extends Comparable<? super T>> void heapSort(T[] vetor) {
-
-		comparacoes = 0;
-		trocas = 0;
-
 		buildMaxHeap(vetor);
 		int n = vetor.length;
 
 		for (int i = vetor.length - 1; i > 0; i--) {
-			trocar(vetor, i, 0);
+			swap(vetor, i, 0);
 			maxHeapify(vetor, 0, --n);
 		}
 	}
@@ -27,24 +21,17 @@ public class HeapSort {
 	private static <T extends Comparable<? super T>> void maxHeapify(T[] vetor,
 			int posicao, int n) {
 		int maximo = 2 * posicao + 1, right = maximo + 1;
-
-		comparacoes++;
 		if (maximo < n) {
-			comparacoes++;
 			if (right < n && vetor[maximo].compareTo(vetor[right]) < 0)
 				maximo = right;
-			comparacoes++;
 			if (vetor[maximo].compareTo(vetor[posicao]) > 0) {
-				trocar(vetor, maximo, posicao);
-
-				// --USO DE RECURSÃO--
+				swap(vetor, maximo, posicao);
 				maxHeapify(vetor, maximo, n);
 			}
 		}
 	}
 
-	private static void trocar(Object[] vetor, int j, int aposJ) {
-		trocas++;
+	private static void swap(Object[] vetor, int j, int aposJ) {
 		Object aux = vetor[j];
 		vetor[j] = vetor[aposJ];
 		vetor[aposJ] = aux;
@@ -53,22 +40,21 @@ public class HeapSort {
 	public static void main(String[] args) {
 
 		String[] vetor = { "Laranja", "Abacate", "Maçã", "Pera", "Limão",
-				"Banana", "Açaí" };
+				"Banana", "Açaí"};
 
 		System.out.println("Vetor antes: \n");
 		for (int i = 0; i < vetor.length; i++) {
 
-			System.out.print(vetor[i] + ", ");
+			System.out.print(vetor[i] +", ");
 		}
 
 		heapSort(vetor);
-		
+
 		System.out.println("\n\nVetor ordenado com o Heap Sort: \n");
 		for (int i = 0; i < vetor.length; i++) {
 
-			System.out.print(vetor[i] + ", ");
+			System.out.print(vetor[i] +", ");
 		}
-		System.out.println("\nComparações: " +comparacoes +"|Trocas: " +trocas);
 
 	}
 

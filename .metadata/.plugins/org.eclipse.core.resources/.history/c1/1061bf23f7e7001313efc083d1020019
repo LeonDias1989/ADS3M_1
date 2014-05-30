@@ -37,7 +37,7 @@ public class HeapSort {
 			if (vetor[maximo].compareTo(vetor[posicao]) > 0) {
 				trocar(vetor, maximo, posicao);
 
-				// --USO DE RECURSÃO--
+				// USO DE RECURSÃO
 				maxHeapify(vetor, maximo, n);
 			}
 		}
@@ -62,13 +62,12 @@ public class HeapSort {
 		}
 
 		heapSort(vetor);
-		
+
 		System.out.println("\n\nVetor ordenado com o Heap Sort: \n");
 		for (int i = 0; i < vetor.length; i++) {
 
 			System.out.print(vetor[i] + ", ");
 		}
-		System.out.println("\nComparações: " +comparacoes +"|Trocas: " +trocas);
 
 	}
 
