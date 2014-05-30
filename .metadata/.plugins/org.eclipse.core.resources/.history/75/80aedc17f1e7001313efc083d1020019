@@ -1,0 +1,24 @@
+package busca_binaria;
+
+public class Principal {
+
+	public static void main(String[] args) {
+
+		RepositorioContato lista = new RepositorioContato();
+
+		lista.adicionar(new Contato("Pitagoras", "51-85858585"));
+		lista.adicionar(new Contato("J.Alencar", "51-84848484"));
+		lista.adicionar(new Contato("Endométrio", "51-91919191"));
+		lista.adicionar(new Contato("Bartolomeu", "51-81818181"));
+		lista.adicionar(new Contato("Leon", "51-85314027"));
+		lista.adicionar(new Contato("Dante", "51-96666666"));
+		lista.adicionar(new Contato("Cristhoper", "51-33343536"));
+		lista.adicionar(new Contato("Funéria", "51-99999999"));
+
+		System.out.println(lista.buscaBinaria(lista.getLista(), "Adailton"
+				+ "Total comparações: " + RepositorioContato.comparacoes));
+
+		System.out.println(lista.buscaBinaria(lista.getLista(), "Funéria"));
+	}
+
+}

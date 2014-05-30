@@ -15,8 +15,14 @@ public class Principal {
 		lista.adicionar(new Contato("Cristhoper", "51-33343536"));
 		lista.adicionar(new Contato("Funéria", "51-99999999"));
 
-		System.out.println(lista.buscaBinaria(lista.getLista(), "Adailton"));
-		System.out.println(lista.buscaBinaria(lista.getLista(), "Funéria"));
+		System.out.println("Resultado: "
+				+ lista.buscaBinaria(lista.getLista(), "Adailton")
+				+ "|Total comparações: " + RepositorioContato.comparacoes);
+
+		System.out.println("Resultado: "
+				+ lista.buscaBinaria(lista.getLista(), "Funéria")
+						+ "|Total comparações: "
+						+ RepositorioContato.comparacoes);
 	}
 
 }

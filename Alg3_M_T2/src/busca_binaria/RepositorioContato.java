@@ -2,6 +2,8 @@ package busca_binaria;
 
 public class RepositorioContato {
 
+	static int comparacoes;
+
 	private ListaEncadeada<Contato> lista;
 
 	public RepositorioContato() {
@@ -25,16 +27,19 @@ public class RepositorioContato {
 		int alto = lista.getTotalElementos() - 1;
 		int baixo = 0;
 		int meio = alto / 2;
+		comparacoes = 0;
 
 		while ((achou == false) && alto >= baixo) {
 
+			comparacoes++;
 			if (lista.getElemento(meio).getDado().getNome().compareTo(nome) == 0) {
 				achou = true;
 
+				comparacoes++;
 			} else if (lista.getElemento(meio).getDado().getNome()
 					.compareTo(nome) > 0) {
 				alto = meio - 1;
-
+				comparacoes++;
 			} else {
 				baixo = meio + 1;
 			}
