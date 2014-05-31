@@ -1,0 +1,53 @@
+package App;
+
+import arvore_bin.Nodo;
+import arvore_bin.ArvoreBinaria;
+import Contato.Contato;
+
+public class Principal {
+	
+	public static void main(String[] args) {
+		
+		ArvoreBinaria<Contato> arvore = new ArvoreBinaria<>();
+		
+		Contato c1 = new Contato("Carlos", "1234");
+		Contato c2 = new Contato("Armando", "33321");
+		Contato c3 = new Contato("Epitáfio", "11223344");
+		Contato c4 = new Contato("João", "11223344");
+		Contato c5 = new Contato("Marcos", "443322");
+		Contato c6 = new Contato("Fernando", "11223344");
+		Contato c7 = new Contato("Danilo", "00088");
+		Contato c8 = new Contato("Ismael", "33221");
+		Contato c9 = new Contato("Eduardo", "00088");
+		Contato c10 = new Contato("Jonas", "00082314");
+		
+		
+		Nodo<Contato> nodo = new Nodo<>(c1);
+		
+		
+		arvore.inserir(nodo, c2);
+		arvore.inserir(nodo, c3);
+		arvore.inserir(nodo, c4);
+		arvore.inserir(nodo, c5);
+		arvore.inserir(nodo, c6);
+		arvore.inserir(nodo, c7);
+		arvore.inserir(nodo, c8);
+		arvore.inserir(nodo, c9);
+		arvore.inserir(nodo, c10);
+		
+		System.out.print("Infixa: ");
+		arvore.travessiaInf(nodo);
+		System.out.println();
+		System.out.print("Prefixa: ");
+		arvore.travessiaPre(nodo);
+		System.out.println();
+		System.out.print("Posfixa: ");
+		arvore.travessiaPos(nodo);
+		
+		
+	}
+	
+	
+	
+
+}

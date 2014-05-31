@@ -1,13 +1,13 @@
 package arvore_teste;
 
-import arvore_bin.ArvoreBin;
-import arvore_bin.Nodo;
+import arvore_bin.numeros_inteiros.ArvoreBin;
+import arvore_bin.numeros_inteiros.NodoDadoInteiro;
 
 public class Teste {
 	
 	public static void main(String[] args) {
 
-		Nodo n = new Nodo(3);
+		NodoDadoInteiro n = new NodoDadoInteiro(3);
 
 		ArvoreBin ab = new ArvoreBin();
 

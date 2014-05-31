@@ -10,7 +10,6 @@
 <fullyQualifiedTypeName name="java.io.Serializable"/>
 <fullyQualifiedTypeName name="Utilitarios.Arquivo"/>
 <fullyQualifiedTypeName name="java.util.Collections"/>
-<fullyQualifiedTypeName name="java.lang.Comparable"/>
 <fullyQualifiedTypeName name="javax.swing.plaf.basic.BasicBorders.ToggleButtonBorder"/>
 <fullyQualifiedTypeName name="java.io.ObjectInputStream.GetField"/>
 <fullyQualifiedTypeName name="Contato.RepositorioContato"/>
@@ -26,4 +25,9 @@
 <fullyQualifiedTypeName name="ordenacao.heap_sort.HeapSort"/>
 <fullyQualifiedTypeName name="ordenacao.selection_sort.SelectionSort"/>
 <fullyQualifiedTypeName name="arvore_avl.ArvoreAVL"/>
+<fullyQualifiedTypeName name="busca_binaria.RepositorioContato"/>
+<fullyQualifiedTypeName name="java.awt.color.CMMException"/>
+<fullyQualifiedTypeName name="java.lang.Comparable"/>
+<fullyQualifiedTypeName name="arvore_bin.NodoGeneric"/>
+<fullyQualifiedTypeName name="arvore_bin.TreeGenericDate"/>
 </qualifiedTypeNameHistroy>

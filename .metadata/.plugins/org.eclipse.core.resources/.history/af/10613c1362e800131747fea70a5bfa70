@@ -1,0 +1,47 @@
+package Contato;
+
+import java.io.Serializable;
+
+@SuppressWarnings("serial")
+public class Contato<T extends Comparable<T>> implements Serializable {
+
+	private T nome;
+	private String telefone;
+
+	public Contato(T nome, String telefone) {
+		super();
+		this.nome = nome;
+		this.telefone = telefone;
+	}
+
+	public Contato() {
+
+	}
+
+	public T getNome() {
+		return nome;
+	}
+
+	public void setNome(T nome) {
+		this.nome = nome;
+	}
+
+	public String getTelefone() {
+		return telefone;
+	}
+
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
+
+	@Override
+	public String toString() {
+		return "Nome: " + nome + " Telefone: " + telefone;
+	}
+
+	@Override
+	public int compareTo(T dado) {
+		return this.getNome().compareTo(dado);
+	}
+
+}

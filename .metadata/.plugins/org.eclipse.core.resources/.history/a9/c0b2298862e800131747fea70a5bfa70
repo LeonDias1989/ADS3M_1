@@ -1,0 +1,23 @@
+package App;
+
+import arvore_bin.NodoGeneric;
+import arvore_bin.TreeGenericDate;
+import Contato.Contato;
+
+public class Principal {
+	
+	public static void main(String[] args) {
+		
+		TreeGenericDate<String> arvore = new TreeGenericDate<>();
+		
+		Contato c1 = new Contato());
+		
+		NodoGeneric<Contato> n = new NodoGeneric<>(c1);
+		
+		
+	}
+	
+	
+	
+
+}

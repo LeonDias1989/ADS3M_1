@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
-<listEntry value="/Alg3_M_T5/src/arvore_bin/ArvoreBin.java"/>
+<listEntry value="/Alg3_M_T5/src/arvore_bin/numeros_inteiros/ArvoreBin.java"/>
 </listAttribute>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
 <listEntry value="1"/>
 </listAttribute>
-<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="arvore_bin.ArvoreBin"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="arvore_bin.numeros_inteiros.ArvoreBin"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="Alg3_M_T5"/>
 </launchConfiguration>

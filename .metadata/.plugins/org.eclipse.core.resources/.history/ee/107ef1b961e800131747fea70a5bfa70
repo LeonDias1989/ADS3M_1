@@ -1,0 +1,14 @@
+package App;
+
+import arvore_bin.TreeGenericDate;
+import Contato.Contato;
+
+public class Principal {
+	
+	Contato<String> contato0 = new Contato<>("Leon", "12345");
+	Contato<String> contato1 = new Contato<>("Noel", "550055");
+	Contato<String> contato2 = new Contato<>("Abraao", "2345678");
+	
+	TreeGenericDate<Contato> tree = new TreeGenericDate<>();
+
+}

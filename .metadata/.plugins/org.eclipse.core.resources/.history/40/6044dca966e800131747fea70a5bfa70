@@ -1,0 +1,79 @@
+package arvore_bin;
+
+public class TreeGenericDate<T extends Comparable<T>> {
+
+	public void inserir(NodoGeneric<T> n, T valor) {
+
+		int compare = n.getDado().compareTo(valor);
+
+		if (compare > 0) {
+
+			if (n.getEsq() != null) {
+				inserir(n.getEsq(), valor);
+			} else {
+
+				NodoGeneric<T> novoNodo = new NodoGeneric<>(valor);
+				n.setEsq(novoNodo);
+			}
+		} else if (compare < 0) {
+
+			if (n.getDir() != null) {
+				inserir(n.getDir(), valor);
+			} else {
+
+				NodoGeneric<T> novoNodo = new NodoGeneric<>(valor);
+				n.setDir(novoNodo);
+			}
+		}
+
+	}
+
+	public T getRaiz(NodoGeneric<T> nodo) {
+
+		return nodo.getDado();
+	}
+
+	public void travessiaPre(NodoGeneric<T> nodo) {
+		if (nodo != null) {
+
+			nodo.imprimePrefixa();
+		}
+	}
+
+	public void travessiaPos(NodoGeneric<T> nodo) {
+		if (nodo != null) {
+
+			nodo.imprimePosFixa();
+		}
+	}
+
+	public void travessiaInf(NodoGeneric<T> nodo) {
+		if (nodo != null) {
+
+			nodo.imprimeInfixa();
+		}
+	}
+
+	public static void main(String[] args) {
+
+		NodoGeneric<String> n = new NodoGeneric<String>("X");
+
+		TreeGenericDate<String> tree = new TreeGenericDate<>();
+
+		tree.inserir(n, "A");
+		tree.inserir(n, "B");
+		tree.inserir(n, "E");
+		tree.inserir(n, "H");
+		tree.inserir(n, "C");
+		tree.inserir(n, "J");
+
+		System.out.print("Infixa: ");
+		tree.travessiaInf(n);
+		System.out.print("\nPrefixa: ");
+		tree.travessiaPre(n);
+		System.out.print("\nPosfixa: ");
+		tree.travessiaPos(n);
+
+	}
+
+}

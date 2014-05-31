@@ -1,56 +1,89 @@
 package arvore_bin;
 
-public class Nodo {
+public class Nodo<T extends Comparable<T>> {
 
-	private int dado;
-	private Nodo esq, dir, pai;
+	private T dado;
+	private Nodo<T> esq, dir, pai;
 
-	public Nodo() {
-		super();
-	}
-
-	public Nodo(int dado) {
+	public Nodo(T dado) {
 		super();
 		this.dado = dado;
 	}
 
-	public int getDado() {
+	public T getDado() {
 		return dado;
 	}
 
-	public void setDado(int dado) {
+	public void setDado(T dado) {
 		this.dado = dado;
 	}
 
-	public Nodo getEsq() {
+	public Nodo<T> getEsq() {
 		return esq;
 	}
 
-	public void setEsq(Nodo esq) {
+	public void setEsq(Nodo<T> esq) {
 		this.esq = esq;
 	}
 
-	public Nodo getDir() {
+	public Nodo<T> getDir() {
 		return dir;
 	}
 
-	public void setDir(Nodo dir) {
+	public void setDir(Nodo<T> dir) {
 		this.dir = dir;
 	}
 
-	public Nodo getPai() {
+	public Nodo<T> getPai() {
 		return pai;
 	}
 
-	public void setPai(Nodo pai) {
+	public void setPai(Nodo<T> pai) {
 		this.pai = pai;
 	}
 
-	@Override
-	public String toString() {
-		return "Dado:" + dado + ", Esq: " + esq + ", Dir: " + dir;
-	}
-	
-	
+	public void imprimePrefixa() {
 
+		System.out.print("(" + dado);
+		if (esq != null) {
+			esq.imprimePrefixa();
+		} else
+			System.out.print("()");
+
+		if (dir != null) {
+			dir.imprimePrefixa();
+		} else
+			System.out.print("()");
+		System.out.print(")");
+	}
+
+	public void imprimePosFixa() {
+
+		if (esq != null) {
+			esq.imprimePosFixa();
+		} else
+			System.out.print("()");
+
+		if (dir != null) {
+			dir.imprimePosFixa();
+		} else
+			System.out.print("()");
+
+		System.out.print(dado + ")");
+	}
+
+	public void imprimeInfixa() {
+
+		if (esq != null) {
+			esq.imprimeInfixa();
+		} else
+			System.out.print("()");
+
+		System.out.print(dado);
+
+		if (dir != null) {
+			dir.imprimeInfixa();
+		} else
+			System.out.print("()");
+	}
 }

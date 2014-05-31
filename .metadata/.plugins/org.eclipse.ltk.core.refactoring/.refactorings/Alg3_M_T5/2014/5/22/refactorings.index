@@ -3,3 +3,12 @@
 1401458248643	Rename local variable 'no'
 1401458315810	Rename local variable 'no'
 1401459801381	Move package
+1401498987874	Rename package 'Principal'
+1401499586997	Rename local variable 'n'
+1401501963048	Rename method 'buscarElemento'
+1401503453847	Move compilation units
+1401503474566	Rename type 'NodoGeneric'
+1401503495761	Rename type 'Nodo'
+1401503512508	Rename type 'Nod'
+1401503522165	Rename type 'TreeGenericDate'
+1401503540478	Rename type 'BST'

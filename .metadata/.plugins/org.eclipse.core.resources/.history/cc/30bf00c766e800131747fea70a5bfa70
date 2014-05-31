@@ -1,0 +1,37 @@
+package App;
+
+import arvore_bin.NodoGeneric;
+import arvore_bin.TreeGenericDate;
+import Contato.Contato;
+
+public class Principal {
+	
+	public static void main(String[] args) {
+		
+		TreeGenericDate<Contato> arvore = new TreeGenericDate<>();
+		
+		Contato c1 = new Contato("Cassionildo", "1234");
+		Contato c2 = new Contato("Adamastor", "33321");
+		Contato c3 = new Contato("Epiláviano", "11223344");
+		Contato c4 = new Contato("Jenovino", "11223344");
+		Contato c5 = new Contato("Malaquias", "443322");
+		Contato c6 = new Contato("Fulano", "11223344");
+		
+		NodoGeneric<Contato> nodo = new NodoGeneric<>(c1);
+		
+		
+		arvore.inserir(nodo, c2);
+		arvore.inserir(nodo, c3);
+		arvore.inserir(nodo, c4);
+		arvore.inserir(nodo, c5);
+		arvore.inserir(nodo, c6);
+		
+		arvore.travessiaInf(nodo);
+		
+		
+	}
+	
+	
+	
+
+}
